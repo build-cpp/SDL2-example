@@ -1,0 +1,15 @@
+# Reference: https://build-cpp.github.io/cmkr/cmake-toml
+[project]
+name = "cmkr-sdl"
+
+[vcpkg]
+version = "2023.01.09"
+packages = ["sdl2"]
+
+[find-package.SDL2]
+
+[target.cmkr-sdl]
+type = "executable"
+sources = ["src/cmkr-sdl/main.cpp"]
+compile-features = ["cxx_std_11"]
+link-libraries = ["SDL2::SDL2", "SDL2::SDL2main"]
